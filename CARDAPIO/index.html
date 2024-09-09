@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante Delícias</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Restaurante</h1>
+            <nav>
+                <a href="#menu">Cardápio</a>
+                <a href="#cart">Carrinho</a>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <section id="menu">
+            <h2>Cardápio</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <img src="./fotos/pastel.jpg" alt="Pastel">
+                    <div class="item-info">
+                        <span class="item-name">PASTEL</span>
+                        <p class="item-description">Pastel misto, queijo, frango e carne.</p>
+                        <p class="item-price">R$ 10,00</p>
+                        <button class="add-to-cart-btn" onclick="addToCart('Pastel', 10)">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="./fotos/coxa branca.jpg" alt="Coxinhas">
+                    <div class="item-info">
+                        <span class="item-name">COXINHAS</span>
+                        <p class="item-description">Empanadas e fritas, acompanhadas de molho picante.</p>
+                        <p class="item-price">R$ 5,00</p>
+                        <button class="add-to-cart-btn" onclick="addToCart('Coxinhas', 5)">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="./fotos/pizza.jpg" alt="Pizza">
+                    <div class="item-info">
+                        <span class="item-name">PIZZA</span>
+                        <p class="item-description">Pizza calabresa, frango, queijo.</p>
+                        <p class="item-price">R$ 60,00</p>
+                        <button class="add-to-cart-btn" onclick="addToCart('Pizza', 60)">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="./fotos/bola de queijo.jpg" alt="Bola de Queijo">
+                    <div class="item-info">
+                        <span class="item-name">BOLA DE QUEIJO</span>
+                        <p class="item-description">Bolinhas de queijo.</p>
+                        <p class="item-price">R$ 15,00</p>
+                        <button class="add-to-cart-btn" onclick="addToCart('Bola de Queijo', 15)">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cart">
+            <h2>Carrinho de Compras</h2>
+            <ul id="cart-items">
+                <!-- Itens do carrinho serão adicionados aqui -->
+            </ul>
+            <div class="cart-summary">
+                <p id="total-price">Total: R$ 0,00</p>
+                <button class="clear-cart-btn" onclick="clearCart()">Limpar Carrinho</button>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
